@@ -2,12 +2,13 @@ campus = {
     "Hostel": {"Cafeteria": 150, "Admin Block": 300},
     "Cafeteria": {"Academic Block": 200},
     "Admin Block": {"Academic Block": 120},
-    "Academic Block": {"Library": 100},
+    "Academic Block": {"Library": 100, "Gym": 60},
+    "Gym": {"Library": 80},
     "Library": {},
 }
 
 heuristic = {"Hostel": 350, "Cafeteria": 260, "Admin Block": 150,
-             "Academic Block": 90, "Library": 0}
+             "Academic Block": 90, "Gym": 80, "Library": 0}
 
 
 def get_g(path):
