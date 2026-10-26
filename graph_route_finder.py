@@ -33,16 +33,19 @@ def get_f(path):
 
 def a_star(start, goal):
     frontier = [[start]]
+    explored = 0
 
     while len(frontier) > 0:
         frontier.sort(key=get_f)
         path = frontier.pop(0)
         node = path[-1]
 
+        explored += 1
         print("Exploring", node, " path:", path,
               " g =", get_g(path), " h =", get_h(path), " f =", get_f(path))
 
         if node == goal:
+            print("Total nodes explored before goal:", explored)
             return path
 
         for neighbour in graph[node]:
